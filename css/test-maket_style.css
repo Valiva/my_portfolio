@@ -1,0 +1,593 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display:block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size:14px;
+	-ms-text-size-adjust:100%;
+	-moz-text-size-adjust:100%;
+	-webkit-text-size-adjust:100%;
+}
+
+input,button,textarea{font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border: 0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+
+body{
+		background: #E5E5E5;
+		font-family: 'Roboto', sans-serif;
+
+}
+.conteiner {;
+	max-width:1200px;
+	margin: 0px auto;
+	position: 60px 15px;
+}
+
+@media (max-width: 1200px){
+	.conteiner {
+	width:830px;
+}
+}
+
+.conteiner-content {
+	display: flex;
+	max-width:1170px;
+	justify-content: space-between;
+	margin: 60px 0 60px 0 ;
+}
+
+.content-main {
+	width: 870px;
+	padding: 0 0 30px 0;
+}
+
+.cards-holders {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.content-main + .content-sidebar{
+	margin: 0 0 0 30px;
+}
+
+
+/*карточка*/
+a.card-link {
+	display: inline-block;
+	transition: opacity 0.2s ease-in;
+}
+
+a.card-link:hover{
+	opacity: 0.8;
+	transform:translateY(-3px);
+}
+
+.content-main__card {
+	width: 270px;
+	height: 334px;
+	background:#FFFFFF;
+	position: relative;
+	margin: 0 0 30px 0;
+}
+.card__badges {
+	position: absolute;
+	top:10px;
+	left: 15px;
+	right: 15px;
+	display: flex;
+}
+
+.card__badges > * + *{
+	margin-left: 10px;
+}
+
+.badge{
+	display: inline-block;
+	height: 22px;
+	padding: 0 10px;
+	border-radius: 4px;
+	font-size: 14px;
+	line-height: 23px;
+	color: #000000;
+}
+
+.card__badge_class {
+	background: #FFCF26;
+}
+.card__badge_credit {
+	background: #11BE75;
+	color: #fff;
+}
+
+.card__img {
+	display: block;
+}
+.card__info {
+	padding: 16px 77px 20px 15px;
+	font-style: normal;
+}
+
+.card_info__title {
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 21px;
+	color: #000000;
+}
+
+.card_info__term {
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 16px;
+	color: #000000;
+	margin: 11px 0 0 0;
+}
+
+.card_info__metro:before{
+	content: "";
+	display: inline-block;
+	vertical-align: baseline;
+	width: 16px;
+	height: 11px;
+	margin: 2px 8px 0 1px;
+	background-image: url(./../imj/Vector.png);
+	background-repeat: no-repeat;
+	background-size: initial;
+}
+
+.card_info__metro {
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 16px;
+	color: #000000;
+	margin: 11px 0 0 0;
+}
+
+
+.card_info__address {
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 16px;
+	color: #777777;
+	margin: 11px 0 0 0;
+}
+
+.card-link--hidden{
+	display: none !important;
+}
+
+/*кнопка показать еще*/
+
+.img-button {
+	width: 24px;
+	height: 24px;
+	margin: -2px 8px 0 0;
+
+}
+
+.button__more {
+	width: 870px;
+	height: 80px;
+	background: #d4d2d2;
+	border-radius: 4px;
+	font-size: 18px;
+	line-height: 21px;
+	text-align: center;
+	color: #4290C9;
+}
+
+.button__more:hover{
+	opacity: 0.8;
+	transform:translateY(-3px)
+}
+
+/*sidebar*/
+
+.content-sidebar {
+	width: 271px;
+	min-width: 200px;
+	
+}
+
+.sidebar_widget_location {
+	max-height: 143px;
+
+}
+.sidebar_widget__title {
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 20px;
+	color: #000000;
+	text-align: left;
+	position: relative;
+	cursor: pointer;
+
+}
+.sidebar_widget__title:after{
+	content: "";
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	right: 0;
+	background-image: url(./../imj/icons/chevron-up.svg);
+	background-repeat: no-repeat;
+	background-size: initial;
+	background-position: center;
+}
+
+.widget__title--active:after{
+	transform: rotate(180deg);
+}
+
+
+.sidebar_widget__body {
+	position: relative;
+}
+
+.sidebar_widget__body--hidden{
+	display: none;
+}
+
+	/*виджет близость к метро*/
+	.location {
+		margin: 20px 0 0 0 ;
+		border: 1px solid #D6D6D6;
+		box-sizing: border-box;
+		border-radius: 4px 4px 0px 0px;
+		overflow: hidden;
+		    min-width: 270px;
+	}
+	.location__row {
+		display: flex;
+	}
+	.row_2 {
+		border-top: 1px solid #D6D6D6;
+	}
+
+	.active--radius_1 {
+		border-radius: 4px 0px 0px 0px;
+	}
+
+	.active--radius_2 {
+		border-radius: 0px 4px 0px 0px;
+	}
+
+	.active--radius_3 {
+		border-radius: 0px 0px 4px 4px;
+	}
+ 
+	.location__btn {
+		background-color: transparent;
+		font-style: normal;
+		height: 50px;
+		font-weight: 500;
+		font-size: 14px;
+		text-align: center;
+		padding: 0 15px;
+		line-height: 50px;
+		color: #3C3C3C;
+		flex-grow: 1;
+		cursor: pointer;
+		transition: background-color 0.2s ease-in;
+		white-space: nowrap;
+	}
+
+	.location_checkbox {
+		width: 1px;
+		height: 1px;
+		position: absolute;
+		opacity: 0;
+		appearance: none;
+	}
+
+	.location__btn:hover{
+		background-color:#fce388;
+	}
+
+	.location_checkbox:checked + .location__btn {
+		background-color:#FFCF26;
+	}
+
+	.location_checkbox:checked + .location__btn:hover {
+		background-color:#e0b000;
+	}
+
+	/*виджет срок сдачи*/
+	.sidebar_widget_date {
+		max-height: 169px;
+		margin: 30px 0 0 0;
+	}
+
+	.date {
+		max-height: 163px;
+		margin: 20px 0 0 0;
+	}
+
+	.radio {
+		display: block;
+		cursor: pointer;
+	}
+
+	.radio__real {
+		width: 1px;
+		height: 1px;
+		position: absolute;
+		opacity: 0;
+		appearance: none;
+	}
+
+	.radio__fake {
+		position: relative;
+		background: #FFFFFF;
+		border: 1px solid #777777;
+		border-radius: 50%;
+		height: 20px;
+		width: 20px;
+		box-sizing: border-box;
+		display: inline-block;
+		margin: 0 10px 0 0;
+	}
+
+	.radio__real:checked + .radio__fake::before {
+		content: "";
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background-color: #3C3C3C;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.radio__real:checked + .radio__fake{
+		background-color: #FFE074;
+	}
+
+	.radio__title {
+		margin: 1px 0 15px 0;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 19px;
+		color: #3C3C3C;
+		vertical-align: top;
+		display: inline-block;
+	}
+
+	.radio__real:checked ~ .radio__title {
+		font-weight: 500;	
+	}
+
+
+	/*виджет дополнительные опции*/
+	.sidebar_widget_option {
+		max-height: 380px;
+		margin: 30px 0 0 0;
+	}
+	.option {
+		cursor: pointer;
+		margin: 20px 0 0 0 ;
+	}
+	.option__checkbox {
+	cursor: pointer;
+	display: block;
+	}
+
+	.option__checkbox--hidden{
+		display: none;
+	}
+
+	.op__checkbox__real {
+		width: 1px;
+		height: 1px;
+		position: absolute;
+		opacity: 0;
+		appearance: none;
+	}
+
+	.op__checkbox__fake {
+		position: relative;
+		border: 1px solid #777777;
+		box-sizing: border-box;
+		border-radius: 2px;
+		display: inline-block;
+		height: 20px;
+		width: 20px;
+		overflow: hidden;
+		margin: 0 10px 0 0;
+	}
+
+	.op__checkbox__real:checked + .op__checkbox__fake::before {
+		content: "";
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		background-image: url(./../imj/icons/check.svg);
+		background-color: #FFE074;
+	}
+
+	.op__checkbox__title {
+		margin: 0px 0 20px 0;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 19px;
+		color: #3C3C3C;
+		vertical-align: top;
+		display: inline-block;
+	}
+
+
+	.op__checkbox__real:checked ~ .op__checkbox__title {
+		font-weight: 500;	
+	}
+
+.widget__hidden{
+	display: none;
+}
+
+	.button__show-hidden {
+		font-size: 16px;
+		line-height: 19px;
+		color: #4290C9;
+		background-color: transparent;
+		margin: -5px 0 0 0;
+		cursor: pointer;
+		transition: 0.2s ease-in;
+	}
+
+
+	.button__show-hidden:hover{
+		text-decoration: underline;
+		opacity: 0.7;
+	}
+
+
+	/*стилизованный чекбокс услуги*/
+	.sidebar_widget_service {
+		margin: 30px 0 0 0 ;
+	}
+	.service__checkbox {
+		margin: 30px 0 0 0;
+			cursor: pointer;
+
+	}
+	.ser__checkbox__real {
+		width: 1px;
+		height: 1px;
+		position: absolute;
+		opacity: 0;
+		appearance: none;
+	}
+	.ser__checkbox__fake {
+		position: relative;
+		box-sizing: border-box;
+		border-radius: 2px;
+		display: inline-block;
+		width: 37px;
+		height: 20px;
+		border-radius: 10px;
+		overflow: hidden;
+		margin: 0 10px 0 0;
+		background: #C4C4C4;
+
+	}
+
+	.ser__checkbox__fake::before{
+		content: "";
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background: #3C3C3C;
+		position: absolute;
+		top: 2px;
+		left: 2px;
+		transition: all 0.2s ease-in;
+
+	}
+
+	.ser__checkbox__real:checked + .ser__checkbox__fake::before {
+		content: "";
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background: #3C3C3C;
+		position: absolute;
+		top: 2px;
+		left: 19px;
+	}
+
+	.ser__checkbox__real:checked + .ser__checkbox__fake{
+		background-color: #FFE074;
+	}
+
+		.ser__checkbox__real:checked ~ .ser__checkbox__title {
+		font-weight: 500;	
+	}
+
+	.ser__checkbox__title {
+		margin: 0px 0 20px 0;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 19px;
+		color: #3C3C3C;
+		vertical-align: top;
+		display: inline-block;
+	}
+
+
+/*кнопки работы с фильтрами*/
+	.sidebar_widget__filters{
+		margin: 30px 0 0 0;
+	}
+	.button_filter-on{
+		width: 270px;
+		height: 50px;
+		background: #FFCF26;
+		border-radius: 4px;
+		margin: 0 0 10px 0;
+
+		font-size: 16px;
+		line-height: 25px;
+		text-align: center;
+		color: #000000;
+	}
+
+	.button_filter-on:hover{
+		opacity: 0.7;
+		transform:translateY(-3px);
+	}
+
+ 	.img-button-filt{
+ 		width: 24px;
+		height: 24px;
+ 	}
+
+	.button_filter-of{
+		width: 270px;
+		height: 50px;
+		border: 1px solid #D6D6D6;
+		box-sizing: border-box;
+		border-radius: 4px;
+		background:transparent;
+
+		font-size: 16px;
+		line-height: 25px;
+		text-align: center;
+		color: #3C3C3C;
+	}
+
+	.button_filter-of:hover{
+		opacity: 0.7;
+		transform:translateY(-3px);
+	}
+
